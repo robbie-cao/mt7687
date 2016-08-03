@@ -1,0 +1,17 @@
+__var RCC_CFGR;
+__var RCC_CR;
+__var RCC_CIR;
+__var IWDG_PR;
+__var IWDG_RLR;
+
+execUserFlashInit()
+{
+    __writeMemory32(0x76371688,0x8300f050, "Memory");
+	__writeMemory32(0x76371688,0x8300f050, "Memory");
+	__writeMemory32(0x76371688,0x8300f050, "Memory");
+}
+
+execUserFlashExit()
+{
+  
+}
