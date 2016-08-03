@@ -11,8 +11,10 @@ feature_mk=""
 platform=$(uname)
 if [[ "$platform" =~ "MINGW" ]]; then
     export EXTRA_VAR=-j
+elif [[ "$platform" =~ "Darwin" ]]; then
+    export EXTRA_VAR=-j
 else
-    export EXTRA_VAR=-j`cat /proc/cpuinfo |grep ^processor|wc -l`
+    export EXTRA_VAR=-j`cat /proc/cpuinfo | grep ^processor | wc -l`
 fi
 ###############################################################################
 #Functions
