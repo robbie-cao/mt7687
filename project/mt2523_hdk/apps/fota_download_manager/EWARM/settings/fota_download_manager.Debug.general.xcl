@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armJET.dll" 
+
+"Z:\gva\project\mt2523_hdk\apps\fota_download_manager\EWARM\..\..\..\..\..\out_iar\mt2523_hdk\fota_download_manager\Debug\Exe\fota_download_manager.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--flash_loader "Z:\gva\project\mt2523_hdk\apps\fota_download_manager\EWARM\..\..\..\..\..\tools\iar\mt2523\FlashMT2523.board" 
+
+
+
+

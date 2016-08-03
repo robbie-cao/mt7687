@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armJET.dll" 
+
+"Z:\gva\project\mt2523_hdk\apps\freertos_thread_creation\EWARM\..\..\..\..\..\out_iar\mt2523_hdk\freertos_thread_creation\Debug\Exe\freertos_thread_creation.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--flash_loader "Z:\gva\project\mt2523_hdk\apps\freertos_thread_creation\EWARM\..\..\..\..\..\tools\iar\mt2523\FlashMT2523.board" 
+
+
+
+

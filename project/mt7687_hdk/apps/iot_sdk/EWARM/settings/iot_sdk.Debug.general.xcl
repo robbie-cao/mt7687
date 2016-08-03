@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armJET.dll" 
+
+"\\10.19.22.204\mtk11200\mp3-0530\gva\out_iar\mt7687_hdk\iot_sdk\Debug\Exe\iot_sdk.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--flash_loader "\\10.19.22.204\mtk11200\mp3-0530\gva\project\mt7687_hdk\apps\iot_sdk\EWARM\..\..\..\..\..\tools\iar\mt7687\FlashMT7687.board" 
+
+
+
+

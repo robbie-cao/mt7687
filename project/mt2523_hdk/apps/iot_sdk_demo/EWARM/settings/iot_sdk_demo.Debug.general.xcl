@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armJET.dll" 
+
+"\\10.19.22.217\mtk10193\2523_DOC_GIT\mp3_629\gva\project\mt2523_hdk\apps\iot_sdk_demo\EWARM\..\..\..\..\..\out_iar\mt2523_hdk\iot_sdk_demo\Debug\Exe\freertos_thread_creation.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--flash_loader "\\10.19.22.217\mtk10193\2523_DOC_GIT\mp3_629\gva\project\mt2523_hdk\apps\iot_sdk_demo\EWARM\..\..\..\..\..\tools\iar\mt2523\FlashMT2523.board" 
+
+
+
+

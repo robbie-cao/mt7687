@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armJET.dll" 
+
+"Z:\gva\project\mt2523_hdk\apps\sensor_subsys_accelerometer\EWARM\..\..\..\..\..\out_iar\mt2523_hdk\sensor_subsys_accelerometer\Debug\Exe\sensor_subsys_accelerometer.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--flash_loader "Z:\gva\project\mt2523_hdk\apps\sensor_subsys_accelerometer\EWARM\..\..\..\..\..\tools\iar\mt2523\FlashMT2523.board" 
+
+
+
+

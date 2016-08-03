@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armJET.dll" 
+
+"\\10.19.22.217\mtk09435\larkmp33\gva\project\mt2523_hdk\hal_examples\audio_play_1k_tone\EWARM\..\..\..\..\..\out_iar\mt2523_hdk\audio_play_1k_tone\Exe\audio_play_1k_tone.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--flash_loader "\\10.19.22.217\mtk09435\larkmp33\gva\project\mt2523_hdk\hal_examples\audio_play_1k_tone\EWARM\..\..\..\..\..\tools\iar\mt2523\FlashMT2523.board" 
+
+
+
+
