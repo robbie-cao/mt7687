@@ -6,6 +6,15 @@
 
 
 SOURCE_DIR  = ../../../../..
+
+ifneq ($(findstring CYGWIN, ${UNAME}), )
+	SOURCE_DIR  := ${ROOT_DIR}
+else
+ifneq ($(findstring CYGWIN, ${UNAME}), )
+	SOURCE_DIR  := ${ROOT_DIR}
+endif
+endif
+
 BINPATH     = ~/gcc-arm-none-eabi/bin
 PWD         = $(shell pwd)
 DATIME      = $(shell date --iso=seconds)
@@ -225,7 +234,7 @@ all: proj
 	$(Q)$(SOURCE_DIR)/tools/scripts/build/copy_firmware.sh $(SOURCE_DIR) $(OUTPATH) $(IC_CONFIG) $(BOARD_CONFIG) $(PROJ_NAME).bin $(PWD)
 	$(Q)cp *.cmm $(OUTPATH)/
 
-MOD_EXTRA = BUILD_DIR=$(BUILD_DIR) OUTPATH=$(OUTPATH) PROJ_PATH=$(PROJ_PATH)
+MOD_EXTRA = BUILD_DIR=$(BUILD_DIR) OUTPATH=$(OUTPATH) PROJ_PATH=$(PROJ_PATH) APP_PATH=$(ROOT_PATH)/$(APP_PATH)
 
 $(LIBS): $(MODULE_PATH)
 

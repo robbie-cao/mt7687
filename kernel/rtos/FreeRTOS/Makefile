@@ -1,10 +1,18 @@
+OS_VERSION := $(shell uname)
+PWD         = $(shell pwd)
+
 SOURCE_DIR = ../../..
 BINPATH = ~/gcc-arm-none-eabi/bin
 PROJ_PATH ?= ../../../project/mt7687_hdk/apps/iot_sdk/GCC
 CONFIG_PATH ?= .
 
-CFLAGS += -I$(PROJ_PATH)/../inc
-CFLAGS += -I../../../$(CONFIG_PATH)
+ifneq ($(filter CYGWIN%,$(OS_VERSION)),)
+	CFLAGS += -I$(APP_PATH)/inc
+	CFLAGS += -I$(ROOT_PATH)
+else
+	CFLAGS += -I$(PROJ_PATH)/../inc
+	CFLAGS += -I../../../$(CONFIG_PATH)
+endif
 
 FEATURE    ?= feature.mk
 
