@@ -60,6 +60,28 @@ $(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.c
 	@echo Build... $@ >> $(BUILD_LOG)
 	@if [ -e "$@" ]; then rm -f "$@"; fi
 	@echo $(CC) $(CFLAGS) $@ >> $(BUILD_LOG)
+ifneq ($(filter MINGW%,$(OS_VERSION)),)
+	@-$(CC) $(CFLAGS) -c $< -o $$(basename $@) 2>>$(ERR_LOG); \
+	if [ "$$?" != "0" ]; then \
+		echo "Build... $$(basename $@) FAIL"; \
+		echo "Build... $@ FAIL" >> $(BUILD_LOG); \
+	else \
+		echo "Build... $$(basename $@) PASS"; \
+		echo "Build... $@ PASS" >> $(BUILD_LOG); \
+		mv -f $$(basename $@) $@; \
+	fi;
+else
+ifneq ($(filter CYGWIN%,$(OS_VERSION)),)
+	@-$(CC) $(CFLAGS) -c $< -o $$(basename $@) 2>>$(ERR_LOG); \
+	if [ "$$?" != "0" ]; then \
+		echo "Build... $$(basename $@) FAIL"; \
+		echo "Build... $@ FAIL" >> $(BUILD_LOG); \
+	else \
+		echo "Build... $$(basename $@) PASS"; \
+		echo "Build... $@ PASS" >> $(BUILD_LOG); \
+		mv -f $$(basename $@) $@; \
+	fi;
+else
 	@-$(CC) $(CFLAGS) -c $< -o $@ 2>>$(ERR_LOG); \
 	if [ "$$?" != "0" ]; then \
 		echo "Build... $$(basename $@) FAIL"; \
@@ -68,6 +90,8 @@ $(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.c
 		echo "Build... $$(basename $@) PASS"; \
 		echo "Build... $@ PASS" >> $(BUILD_LOG); \
 	fi;
+endif
+endif
 
 $(BUILD_DIR)/%.d: $(SOURCE_DIR)/%.c
 	@mkdir -p $(dir $@)
