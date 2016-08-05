@@ -99,6 +99,55 @@ The architecture layers are described below:
 
 ### IAR
 
+## Build
+
+### `build.sh`
+
+  ```
+  ===============================================================
+  Build Project
+  ===============================================================
+  Usage: ./build.sh <board> <project> [bl|clean] <argument>
+
+  Example:
+         ./build.sh mt7687_hdk iot_sdk_demo
+         ./build.sh mt7687_hdk iot_sdk_demo bl      (build with bootloader)
+         ./build.sh clean                      (clean folder: out)
+         ./build.sh mt7687_hdk clean           (clean folder: out/mt7687_hdk)
+         ./build.sh mt7687_hdk iot_sdk_demo clean   (clean folder: out/mt7687_hdk/iot_sdk_demo)
+
+  Argument:
+         -f=<feature makefile> or --feature=<feature makefile>
+             Replace feature.mk with other makefile. For example,
+             the feature_example.mk is under project folder, -f=feature_example.mk
+             will replace feature.mk with feature_example.mk.
+
+         -o=<make option> or --option=<make option>
+             Assign additional make option. For example,
+             to compile module sequentially, use -o=-j1.
+             to turn on specific feature in feature makefile, use -o=<feature_name>=y
+             to assign more than one options, use -o=<option_1> -o=<option_2>.
+
+  ===============================================================
+  List Available Example Projects
+  ===============================================================
+  Usage: ./build.sh list
+  ```
+
+### `mmm [path] [option]`
+
+  ```
+  Usage:
+    mmm [path] [option]
+    - path   - relative path to Makefile (for an App) to be built with
+    - option - target to make, eg clean, debug, release, etc
+  Example:
+    mmm project/mt7687_hdk/apps/iot_sdk_demo clean (* at top folder)
+    mmm project/mt7687_hdk/apps/iot_sdk_demo       (* at top folder)
+    mmm . clean          (* at project/mt7687_hdk/apps/iot_sdk_demo)
+    mmm                  (* at project/mt7687_hdk/apps/iot_sdk_demo)
+  ```
+
 ## Flashing
 
 **Currently support flashing in Windows ONLY!**
