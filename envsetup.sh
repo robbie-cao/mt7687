@@ -129,10 +129,10 @@ function mmm_usage()
     echo "  - path   - relative path to Makefile (for an App) to be built with"
     echo "  - option - target to make, eg clean, debug, release, etc"
     echo "Example:"
-    echo "  mmm Apps/hello clean (* at top folder)"
-    echo "  mmm Apps/hello       (* at top folder)"
-    echo "  mmm . clean          (* at Apps/hello)"
-    echo "  mmm                  (* at Apps/hello)"
+    echo "  mmm project/mt7687_hdk/apps/iot_sdk_demo clean (* at top folder)"
+    echo "  mmm project/mt7687_hdk/apps/iot_sdk_demo       (* at top folder)"
+    echo "  mmm . clean          (* at project/mt7687_hdk/apps/iot_sdk_demo)"
+    echo "  mmm                  (* at project/mt7687_hdk/apps/iot_sdk_demo)"
 }
 
 function mm()
