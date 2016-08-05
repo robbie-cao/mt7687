@@ -9,10 +9,6 @@ SOURCE_DIR  = ../../../../..
 
 ifneq ($(findstring CYGWIN, ${UNAME}), )
 	SOURCE_DIR  := ${ROOT_DIR}
-else
-ifneq ($(findstring CYGWIN, ${UNAME}), )
-	SOURCE_DIR  := ${ROOT_DIR}
-endif
 endif
 
 BINPATH     = ~/gcc-arm-none-eabi/bin
