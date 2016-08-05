@@ -41,6 +41,9 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
+/* hal includes */
+#include "hal.h"
+
 /* device.h includes */
 #include "mt7687.h"
 #include "system_mt7687.h"
@@ -71,7 +74,7 @@ static void vTestTask( void *pvParameters )
 
 	xLastExecutionTime = xTaskGetTickCount();
 	xDelayTime = (1 << idx)*mainCHECK_DELAY;
-	
+
 	while (1) {
 		vTaskDelayUntil( &xLastExecutionTime, xDelayTime );
 		LOG_I(freertos, "Hello World from %d\n\r", idx);
@@ -81,8 +84,15 @@ static void vTestTask( void *pvParameters )
 int main(void)
 {
     int idx;
-	
+
     system_init();
+
+    /* Display banner */
+    log_hal_info("\r\n\r\n");   /* The output UART used by log_hal_info is set by log_uart_init() */
+    log_hal_info("################################################################################\r\n");
+    log_hal_info("# Hello Smurfs~~                                                               #\r\n");
+    log_hal_info("################################################################################\r\n");
+    log_hal_info("\r\n\r\n");
 
     /* Create 4 tasks*/
     for (idx=0; idx<4; idx++) {
