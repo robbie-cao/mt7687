@@ -59,6 +59,8 @@ The architecture layers are described below:
 
 ### GCC
 
+> http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/get_started/7687_gcc/get_sdk/index.gsp
+
 **Mac OS**
 
   ```
@@ -96,6 +98,24 @@ The architecture layers are described below:
 ### IAR
 
 ## Flashing
+
+**Currently support flashing in Windows ONLY!**
+
+1. Make sure the jumper pins J23, J26, J27, J30 and J33 are connected, as shown below:
+
+   ![HDK Board Jumper Setting](http://labs.mediatek.com/images/linkitRTOS/get_started/setup_hdk_template/jumper_setting.png)
+
+2. Set the board to **Flash Recovery** mode by connecting jumper **J25 (Flash Mode)**, as shown in the following figure:
+
+   ![Flash Recovery Jumper](http://labs.mediatek.com/images/linkitRTOS/get_started/7687_gcc/download_binary/flash_recovery.png)
+
+3. Flashing with `mt76x7-flash-tool.exe` (located at `<sdk_windows_tools>\MT7687_FlashTool_Public\win\mt76x7-flash-tool.exe`)
+
+   ![MT76x7 Flash Tool](http://labs.mediatek.com/images/linkitRTOS/get_started/7687_gcc/download_binary/flashtool_load_ini.png)
+
+> http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/get_started/7687_gcc/setup_hdk/index.gsp
+
+> http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/get_started/7687_gcc/download_binary/index.gsp
 
 ## Misc
 
