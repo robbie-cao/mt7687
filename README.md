@@ -61,6 +61,8 @@ The architecture layers are described below:
 
 > http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/get_started/7687_gcc/get_sdk/index.gsp
 
+> http://labs.mediatek.com/fileMedia/download/20ee756c-903c-4ec4-8fb4-163697638589
+
 **Mac OS**
 
   ```
@@ -116,6 +118,14 @@ The architecture layers are described below:
 > http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/get_started/7687_gcc/setup_hdk/index.gsp
 
 > http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/get_started/7687_gcc/download_binary/index.gsp
+
+## Hardware
+
+Refer to [LinkIt 7687 Development Board User's Guide](http://labs.mediatek.com/fileMedia/download/51594214-62e7-46fe-a995-6412cc879c08).
+
+This guide described the hardware features of the LinkIt 7687 development board, its pin layout and how to configure its various features.
+
+> http://labs.mediatek.com/fileMedia/download/51594214-62e7-46fe-a995-6412cc879c08
 
 ## Misc
 
