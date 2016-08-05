@@ -42,7 +42,8 @@ notes and brief introduction. Please refer to the readme.txt to learn the basic 
 
 ![Architecture](http://home.labs.mediatek.com/media/apis/7687/MT7687_SDK_architecture.PNG)
 
-The architecture layers are described below.
+The architecture layers are described below:
+
 - BSP
   - **Hardware drivers** provide peripheral drivers for the development platform, such as ADC, I2S, I2C, SPI, RTC, GPIO, UART, Flash, Security Engine, TRNG, GDMA, PWM, WTD and IRDA TX/RX.
   - **Hardware Abstraction Layer (HAL)** provides driver Application Programming Interface (API) encapsulating the low-level functions of peripheral drivers for the operating system (OS), middleware features and applications.
@@ -55,6 +56,44 @@ The architecture layers are described below.
   - Pre-configured projects, such as Wi-Fi station and Wi-Fi access point.
 
 ## Installation
+
+### GCC
+
+**Mac OS**
+
+  ```
+  $ brew install gcc-arm-none-eabi
+  $ cd <linkit_sdk_root>
+  $ ln -s /usr/local tools/gcc/mac/gcc-arm-none-eabi
+  ```
+
+> http://robbie-cao.github.io/blog/2016/05/17/install-gcc-arm-on-mac
+
+**Linux**
+
+  ```
+  $ cd ~
+  $ wget https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q2-update/+download/gcc-arm-none-eabi-5_4-2016q2-20160622-linux.tar.bz2
+  $ mkdir Tools
+  $ tar jxvf gcc-arm-none-eabi-5_4-2016q2-20160622-linux.tar.bz2 -C Tools
+  $ cd <linkit_sdk_root>
+  $ ln -s ~/Tools/gcc-arm-none-eabi-5_4-2016q2 tools/gcc/linux/gcc-arm-none-eabi
+  ```
+
+**Cygwin**
+
+  ```
+  $ cd ~
+  $ wget https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q2-update/+download/gcc-arm-none-eabi-5_4-2016q2-20160622-win32.zip
+  $ mkdir Tools
+  $ unzip gcc-arm-none-eabi-5_4-2016q2-20160622-win32.zip -d Tools
+  $ cd <linkit_sdk_root>
+  $ ln -s ~/Tools/gcc-arm-none-eabi-5_4-2016q2 tools/gcc/win/gcc-arm-none-eabi
+  ```
+
+**Build in Cygwin NOT support yet.**
+
+### IAR
 
 ## Flashing
 
