@@ -1,6 +1,6 @@
 # MediaTek MT7687/7697 LinkIt Platform
 
-## Overview
+## Introduction
 
 MediaTek LinkIt(TM) Development Platform for RTOS provides a comprehensive software solution for devices based on the MediaTek MT7687F SOC,
 including the LinkIt 7687 hardware development kit (HDK). The platform supports hardware abstraction layers, peripheral drivers, FreeRTOS,
@@ -10,12 +10,12 @@ notes and brief introduction. Please refer to the readme.txt to learn the basic 
 
 More information on Linkit SDK official site: http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/sdk_intro/index.gsp
 
-## Getting Started
+### Getting Started
 
 The SDK package supports GCC, Keil, and IAR tool chains. Follow the instructions at <sdk_root>/doc/LinkIt_for_RTOS_Get_Started_Guide.pdf
 to build your first project and run it on the HDK. Release notes are also under the <sdk_root>/doc folder.
 
-## Folder Structure
+### Folder Structure
 
    ```
    \doc                      ->  SDK documents, including get started guide, developer's guide, software and environment guide,
@@ -135,7 +135,7 @@ The architecture layers are described below:
   Usage: ./build.sh list
   ```
 
-### `mmm [path] [option]`
+### `mmm`
 
 **Run `source envsetup` first of all.**
 
