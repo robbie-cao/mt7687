@@ -56,7 +56,8 @@
 * @return      The character as input.
 */
 #ifdef __GNUC__
-int __io_putchar(int ch)
+//int __io_putchar(int ch)
+int __io_putchar2(int ch)
 #else
 int fputc(int ch, FILE *f)
 #endif

@@ -187,6 +187,73 @@ standard names. */
 #define xPortPendSVHandler PendSV_Handler
 #define xPortSysTickHandler SysTick_Handler
 
+#if configUSE_TICKLESS_IDLE == 1
+#define portSUPPRESS_TICKS_AND_SLEEP( xExpectedIdleTime ) vPortSuppressTicksAndSleep( xExpectedIdleTime )
+#elif configUSE_TICKLESS_IDLE == 2
+#define portSUPPRESS_TICKS_AND_SLEEP( xExpectedIdleTime ) tickless_handler( xExpectedIdleTime )
+#endif
+
+
+/* TODO: it is necessary to fine-tune */
+
+/*
+ * priority from 0 to ( configMAX_PRIORITIES - 1 )
+ */
+
+/* for FreeRTOS trace support */
+//#define ENABLE_RTOS_TRACE
+
+/* for lwIP task */
+#define TCPIP_THREAD_NAME "lwIP"
+#define TCPIP_THREAD_STACKSIZE 512
+#define TCPIP_THREAD_PRIO 3
+#define TCPIP_MBOX_SIZE  16
+
+/* for net task */
+#define NETTASK_NAME "net"
+#define NETTASK_STACKSIZE 1024
+#define NETTASK_PRIO 3
+#define MAX_NET_QUEUES     16
+
+/* for inband task */
+#if defined(MTK_WIFI_DIRECT_ENABLE)
+#define WIFI_DIRECT_STACKMORE 128
+#else
+#define WIFI_DIRECT_STACKMORE 0
+#endif
+
+#define INBAND_TASK_NAME "inband"
+#define INBAND_TASK_STACKSIZE (1024 + WIFI_DIRECT_STACKMORE)
+#define INBAND_TASK_PRIO 3
+#define MAX_INBAND_QUEUES      16
+
+/* for idle task */
+#define INFO_TASK_NAME "info"
+#define INFO_TASK_STACKSIZE 256
+#define INFO_TASK_PRIO          1
+
+#define MAX_INFO_QUEUES    16
+#define CFG_INFO_TASK_EN        0
+#define CFG_INFO_TASK_PERIOD    60 /* Unit is second */
+#define CFG_INFO_TASK_DISPLAY_DEBUG_EN        0
+
+
+/* for cli task */
+#define CLI_TASK_NAME "cli"
+#define CLI_TASK_STACKSIZE          1024
+#define CLI_TASK_PRIO               4
+#define CFG_CLI_CMD_DELAY_VALUE     100 /* ms */
+
+/* for iperf task */
+#define IPERF_NAME "iperf"
+#define IPERF_STACKSIZE 2048
+#define IPERF_PRIO 2
+
+/* for wpa supplicant task */
+#define WPA_SUPPLICANT_TASK_NAME        "wpa_supplicant"
+#define WPA_SUPPLICANT_TASK_STACKSIZE   2048
+#define WPA_SUPPLICANT_TASK_PRIO        2
+
 #if defined(__ICCARM__) || defined(__CC_ARM) || defined(__GNUC__)
 /* for FreeRTOS trace support */
 #ifdef ENABLE_RTOS_TRACE

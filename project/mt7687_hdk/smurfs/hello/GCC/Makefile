@@ -103,6 +103,12 @@ APP_FILES += $(APP_PATH_SRC)/ept_eint_var.c
 APP_FILES += $(APP_PATH_SRC)/system_mt7687.c
 APP_FILES += $(APP_PATH_SRC)/sys_init.c
 APP_FILES += $(APP_PATH)/GCC/syscalls.c
+APP_FILES += driver/board/mt76x7_hdk/init/src/io_def.c
+
+ifeq ($(MTK_MINICLI_ENABLE),y)
+	APP_FILES       += $(APP_PATH_SRC)/cli_def.c
+	APP_FILES       += $(APP_PATH_SRC)/cli_cmds.c
+endif
 
 C_FILES += $(APP_FILES)
 C_FILES += driver/board/mt76x7_hdk/ept/src/bsp_gpio_ept_config.c
@@ -117,7 +123,8 @@ S_OBJS = $(S_FILES:%.s=$(BUILD_DIR)/%.o)
 
 CFLAGS += -DMTK_FW_VERSION=\"$(MTK_FW_VERSION)\"
 # Include path
-CFLAGS += -I$(SOURCE_DIR)/driver/chip/mt7687/inc
+CFLAGS += -I$(SOURCE_DIR)/$(APP_PATH)/inc
+CFLAGS += -I$(SOURCE_DIR)/driver/chip/$(IC_CONFIG)/inc
 CFLAGS += -I$(SOURCE_DIR)/driver/chip/inc
 CFLAGS += -I$(SOURCE_DIR)/$(APP_PATH)/inc
 CFLAGS += -I$(SOURCE_DIR)/driver/CMSIS/Include
@@ -145,11 +152,13 @@ endif
 
 ###################################################
 # Libraries
+LIBS += $(OUTPATH)/libminicli.a
 LIBS += $(OUTPATH)/librtos.a
 LIBS += $(OUTPATH)/libservice.a
 LIBS += $(OUTPATH)/libhal.a
 
 MODULE_PATH += $(KRL_OS_PATH)
+MODULE_PATH += $(MID_MINICLI_PATH)
 MODULE_PATH += $(KRL_SRV_PATH)
 MODULE_PATH += $(DRV_CHIP_PATH)
 

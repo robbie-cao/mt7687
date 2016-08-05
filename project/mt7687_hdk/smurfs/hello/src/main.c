@@ -50,6 +50,10 @@
 
 #include "sys_init.h"
 
+#if defined(MTK_MINICLI_ENABLE)
+#include "cli_def.h"
+#endif
+
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -77,7 +81,9 @@ static void vTestTask( void *pvParameters )
 
 	while (1) {
 		vTaskDelayUntil( &xLastExecutionTime, xDelayTime );
+#if 0
 		LOG_I(freertos, "Hello World from %d\n\r", idx);
+#endif
 	}
 }
 
@@ -98,6 +104,12 @@ int main(void)
     for (idx=0; idx<4; idx++) {
         xTaskCreate( vTestTask, "Test", 256, (void*)idx, 3, NULL );
     }
+
+    /* Initialize cli task to enable user input cli command from uart port.*/
+#if defined(MTK_MINICLI_ENABLE)
+    cli_def_create();
+    cli_task_create();
+#endif
 
     /* Start the scheduler. */
     vTaskStartScheduler();
