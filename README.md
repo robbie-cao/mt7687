@@ -12,25 +12,25 @@ on the MT76x7 and MT2523x SOCs.
 
 2. Folder structure
 
-  ```
-  \doc                      ->  SDK documents, including get started guide, developer's guide, software and environment guide,
-                            ->  API reference manual, and SDK release notes.
-  \doc\HDK                  ->  HDK documents, including user guide, layout information, schematics, daughterboard information,
-                            ->  BOM list. The HDK relative application notes are also in this folder, such as power measurement guide.
-  \doc\MCU                  ->  Chipset documents, such as chipset product brief and chipset datasheet.
-  \driver\board             ->  Drivers for the development board
-  \driver\chip              ->  Chipset modules, such as GPIO, I2C, Bluetooth Low Energy.
-  \driver\CMSIS             ->  CMSIS interface drivers.
-  \driver\inc               ->  HAL driver APIs
-  \kernel                   ->  OS / system service
-  \middleware\MTK           ->  MediaTek middleware. Read readme.txt in each module for details.
-  \middleware\third_party   ->  Open source software, such as cjson, fatfs, httpd. Read readme.txt in each module for details.
-  \project\<board>          ->  Example projects of the current SDK. Read <sdk_root>/project/readme.txt for more details.
-  \tools                    ->  Script, generation script, gcc compiler. If there isn't a gcc compiler under the /tools/gcc folder,
-                            ->  extract the tool package to the root folder of the SDK with the following command.
-                            ->       tar -C <sdk_root> -xvzf SDK_VX.Y.Z_tool_chain.tar.gz
-                            **  Please make sure you have /tools/gcc before you build the SDK under linux environment. **
-  ```
+   ```
+   \doc                      ->  SDK documents, including get started guide, developer's guide, software and environment guide,
+                             ->  API reference manual, and SDK release notes.
+   \doc\HDK                  ->  HDK documents, including user guide, layout information, schematics, daughterboard information,
+                             ->  BOM list. The HDK relative application notes are also in this folder, such as power measurement guide.
+   \doc\MCU                  ->  Chipset documents, such as chipset product brief and chipset datasheet.
+   \driver\board             ->  Drivers for the development board
+   \driver\chip              ->  Chipset modules, such as GPIO, I2C, Bluetooth Low Energy.
+   \driver\CMSIS             ->  CMSIS interface drivers.
+   \driver\inc               ->  HAL driver APIs
+   \kernel                   ->  OS / system service
+   \middleware\MTK           ->  MediaTek middleware. Read readme.txt in each module for details.
+   \middleware\third_party   ->  Open source software, such as cjson, fatfs, httpd. Read readme.txt in each module for details.
+   \project\<board>          ->  Example projects of the current SDK. Read <sdk_root>/project/readme.txt for more details.
+   \tools                    ->  Script, generation script, gcc compiler. If there isn't a gcc compiler under the /tools/gcc folder,
+                             ->  extract the tool package to the root folder of the SDK with the following command.
+                             ->       tar -C <sdk_root> -xvzf SDK_VX.Y.Z_tool_chain.tar.gz
+                             **  Please make sure you have /tools/gcc before you build the SDK under linux environment. **
+   ```
 
 ## Overview
 
