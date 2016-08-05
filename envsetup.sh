@@ -96,7 +96,7 @@ function mmm()
 
     if [ "$DIR" ]; then
         DIR=`echo $DIR | sed -e 's/:.*//' -e 's:/$::'`
-        MAKEFILE=$DIR/Makefile
+        MAKEFILE=$DIR/GCC/Makefile
     fi
 
     if [ ! -f $MAKEFILE ]; then
@@ -110,8 +110,8 @@ function mmm()
 
 
     if [ "$DIR" ]; then
-        echo Entering $DIR
-        cd $DIR
+        echo Entering $DIR/GCC
+        cd $DIR/GCC
     fi
 
     make $OPT
