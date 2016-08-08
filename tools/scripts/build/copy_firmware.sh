@@ -96,7 +96,8 @@ combine_bl_cm4 () {
     fi
     BOOTLOADER_BIN_TMP=$1/`basename $BOOTLOADER_BIN .bin`.tmp
     cp $BOOTLOADER_BIN $BOOTLOADER_BIN_TMP
-    BOOTLOADER_BIN_SIZE=`wc --bytes $BOOTLOADER_BIN | cut -d ' ' -f1`
+    #BOOTLOADER_BIN_SIZE=`wc --bytes $BOOTLOADER_BIN | cut -d ' ' -f1`
+    BOOTLOADER_BIN_SIZE=`wc -c $BOOTLOADER_BIN | awk '{print $1}'`
     PADDINGCOUNT=$(($BOOTLOADERMAXSIZE-$BOOTLOADER_BIN_SIZE))
     printf '\377%.0s' $(eval echo "{1..${PADDINGCOUNT}}")  >> $BOOTLOADER_BIN_TMP
     cat $BOOTLOADER_BIN_TMP $CM4_FRIMWARE_BIN > $FLASHBIN
