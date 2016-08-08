@@ -100,10 +100,13 @@ int main(void)
     log_hal_info("################################################################################\r\n");
     log_hal_info("\r\n\r\n");
 
+#if 0
     /* Create 4 tasks*/
-    for (idx=0; idx<4; idx++) {
+    for (idx = 0; idx < 4; idx++) {
         xTaskCreate( vTestTask, "Test", 256, (void*)idx, 3, NULL );
     }
+#endif
+
 
     /* Initialize cli task to enable user input cli command from uart port.*/
 #if defined(MTK_MINICLI_ENABLE)

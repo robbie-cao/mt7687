@@ -68,8 +68,8 @@
 #define FLASH_N9_RAM_CODE_SIZE      0x71000       /* 452KB */
 #define FLASH_CM4_XIP_CODE_SIZE     0xBF000       /* 764KB */
 #define FLASH_TMP_SIZE              0xBF000       /* 764KB */
-#define FLASH_USR_CONF_SIZE         0x5000       /*  20KB */
-#define FLASH_EEPROM_SIZE         	0x1000       /*  4KB */
+#define FLASH_USR_CONF_SIZE         0x5000        /*  20KB */
+#define FLASH_EEPROM_SIZE         	0x1000        /*   4KB */
 
 #define CM4_FLASH_LOADER_ADDR       0x0
 #define CM4_FLASH_COMM_CONF_ADDR    (CM4_FLASH_LOADER_ADDR     + FLASH_LOADER_SIZE)
