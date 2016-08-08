@@ -72,6 +72,28 @@ The architecture layers are described below:
 
 > http://robbie-cao.github.io/blog/2016/05/17/install-gcc-arm-on-mac
 
+There will be issue to build mt2523 with `gcc-arm-none-eabi` `version 49+` due to `-flto` option.
+
+  ```
+  lto1: fatal error: bytecode stream generated with LTO version 2.2 instead of the expected 4.1
+  compilation terminated.
+  lto-wrapper: fatal error: ../../../../../tools/gcc/mac/gcc-arm-none-eabi/bin/arm-none-eabi-gcc returned 1 exit status
+  compilation terminated.
+  /Users/robbie/Tools/gcc-arm-none-eabi-5_4-2016q2/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/ld: error: lto-wrapper failed
+  collect2: error: ld returned 1 exit status
+  ```
+
+Solution as below:
+
+  ```
+  $ cd ~
+  $ wget https://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q3-update/+download/gcc-arm-none-eabi-4_8-2014q3-20140805-mac.tar.bz2
+  $ mkdir Tools
+  $ tar -c gcc-arm-none-eabi-4_8-2014q3-20140805-mac.tar.bz2 -C Tools
+  $ cd <linkit_sdk_root>
+  $ ln -s ~/Tools/gcc-arm-none-eabi-4_8-2014q3 gcc-arm-none-eabi
+  ```
+
 #### Linux
 
   ```
