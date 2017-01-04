@@ -39,7 +39,7 @@ to build your first project and run it on the HDK. Release notes are also under 
 
 ## Architecture
 
-![Architecture](http://home.labs.mediatek.com/media/apis/7687/MT7687_SDK_architecture.PNG)
+![Architecture](https://labs.mediatek.com/images/img_sdk_architecture.png)
 
 The architecture layers are described below:
 
@@ -179,19 +179,23 @@ Solution as below:
 
 1. Make sure the jumper pins J23, J26, J27, J30 and J33 are connected, as shown below:
 
-   ![HDK Board Jumper Setting](http://labs.mediatek.com/images/linkitRTOS/get_started/setup_hdk_template/jumper_setting.png)
+   ![HDK Board Jumper Setting](https://docs.labs.mediatek.com/resource/mt7687-mt7697/files/en/9208380/9208377/1/1472695952838/jumper_setting.png)
 
 2. Set the board to **Flash Recovery** mode by connecting jumper **J25 (Flash Mode)**, as shown in the following figure:
 
-   ![Flash Recovery Jumper](http://labs.mediatek.com/images/linkitRTOS/get_started/7687_gcc/download_binary/flash_recovery.png)
+   ![Flash Recovery Jumper](https://docs.labs.mediatek.com/resource/mt7687-mt7697/files/en/9208390/9208382/1/1472697142342/flash_recovery.png)
 
 3. Flashing with `mt76x7-flash-tool.exe` (located at `<sdk_windows_tools>\MT7687_FlashTool_Public\win\mt76x7-flash-tool.exe`)
 
-   ![MT76x7 Flash Tool](http://labs.mediatek.com/images/linkitRTOS/get_started/7687_gcc/download_binary/flashtool_load_ini.png)
+   ![MT76x7 Flash Tool](https://docs.labs.mediatek.com/resource/mt7687-mt7697/files/en/9208390/9208384/2/1472697142291/flashtool_load_ini.png)
 
 > http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/get_started/7687_gcc/setup_hdk/index.gsp
 
 > http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/get_started/7687_gcc/download_binary/index.gsp
+
+> https://docs.labs.mediatek.com/resource/mt7687-mt7697/en/get-started/gcc-arm-embedded-command-line-tools-free/setup-the-board
+
+> https://docs.labs.mediatek.com/resource/mt7687-mt7697/en/get-started/gcc-arm-embedded-command-line-tools-free/download-a-pre-built-binary-example
 
 ## Hardware
 
@@ -206,4 +210,4 @@ This guide described the hardware features of the LinkIt 7687 development board,
 ## Reference
 
 - http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_rtos/sdk_intro/index.gsp
-
+- https://docs.labs.mediatek.com/resource/mt7687-mt7697/en
